@@ -7,7 +7,7 @@ const imageminPngquant = require('imagemin-pngquant');
 const slash = require('slash');
 const log = require('electron-log');
 
-process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'production';
 
 const isDev = process.env.NODE_ENV !== 'production';
 const isMac = process.platform === 'darwin';
@@ -25,6 +25,7 @@ function createMainWindow() {
     backgroundColor: 'white',
     webPreferences: {
       nodeIntegration: true,
+      enableRemoteModule: true,
     },
   });
 

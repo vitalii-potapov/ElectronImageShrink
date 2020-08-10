@@ -1,11 +1,14 @@
 {
   "name": "image-shrink",
+  "productName": "ImageShrink",
   "version": "1.0.0",
   "description": "App to optimize images",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "dev": "nodemon --exec electron ."
+    "dev": "nodemon --exec cross-env NODE_ENV=development electron main.js",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds"
   },
   "author": "Vitalii Potapov",
   "license": "ISC",
@@ -18,6 +21,8 @@
     "slash": "^3.0.0"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
+    "electron-packager": "^15.0.0",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.21.2",
