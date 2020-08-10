@@ -14,5 +14,9 @@ module.exports = {
   },
   rules: {
     'object-curly-newline': 'off',
+    'max-len': [
+      2,
+      120,
+    ],
   },
 };
