@@ -12,4 +12,7 @@ module.exports = {
     __dirname: 'readonly',
     process: 'readonly',
   },
+  rules: {
+    'object-curly-newline': 'off',
+  },
 };
