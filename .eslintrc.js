@@ -18,5 +18,6 @@ module.exports = {
       2,
       120,
     ],
+    'no-param-reassign': ['error', { props: false }],
   },
 };
