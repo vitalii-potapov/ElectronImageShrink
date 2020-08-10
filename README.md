@@ -1,0 +1,1 @@
+Simple electron.js app to optimize images
