@@ -5,7 +5,7 @@
   "description": "App to optimize images",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon --exec cross-env NODE_ENV=development electron main.js",
+    "dev": "nodemon --exec cross-env NODE_ENV=development electron .",
     "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ImageShrink\"",
     "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds"
@@ -23,12 +23,10 @@
   "devDependencies": {
     "cross-env": "^7.0.2",
     "electron-packager": "^15.0.0",
-    "eslint": "^7.2.0",
+    "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
-    "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsx-a11y": "^6.3.0",
-    "eslint-plugin-react": "^7.20.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "nodemon": "^2.0.4"
   }
 }
